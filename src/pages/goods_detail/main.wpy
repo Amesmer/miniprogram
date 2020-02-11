@@ -5,7 +5,9 @@
 import wepy from 'wepy'
 export default class extends wepy.page {
   config = {}
-  onload() {}
+  onLoad(options) {
+    console.log(options)
+  }
 }
 </script>
 

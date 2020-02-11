@@ -58,6 +58,16 @@ export default class extends wepy.app {
           selectedIconPath: '/assets/icons/my-active.png'
         }
       ]
+    },
+    // 引用并注册全局组件
+    usingComponents: {
+      'van-badge': './assets/vant/badge/index',
+      'van-badge-group': './assets/vant/badge-group/index',
+      'van-row': './assets/vant/row/index',
+      'van-col': './assets/vant/col/index',
+      'van-search': './assets/vant/search/index',
+      'van-cell': './assets/vant/cell/index',
+      'van-cell-group': './assets/vant/cell-group/index'
     }
   }
 
@@ -68,8 +78,38 @@ export default class extends wepy.app {
   constructor() {
     super()
     this.use('requestfix')
+
     // 开启promise功能
     this.use('promisify')
+
+    // 拦截器
+    this.intercept('reuest', {
+      // 发出请求时的回调函数
+      config(p) {
+        wepy.showLoading({
+          title: '数据加载中...'
+        })
+        return p
+      },
+
+      // 请求成功后的回调函数
+      success(p) {
+        // 必须返回响应数据对象，否则后续无法对响应数据进行处理
+        return p
+      },
+
+      // 请求失败后的回调函数
+      fail(p) {
+        // 必须返回响应数据对象，否则后续无法对响应数据进行处理
+        return p
+      },
+
+      // 请求完成时的回调函数(请求成功或失败都会被执行)
+      complete(p) {
+        // 隐藏loading 效果
+        wepy.hideLoading()
+      }
+    })
   }
 
   onLaunch() {}

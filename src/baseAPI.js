@@ -1,6 +1,6 @@
 import wepy from 'wepy'
 
-const baseURL='https://www.zhengzhicheng.cn/api/public/v1'
+const baseURL='https://www.uinav.com/api/public/v1'
 /* 
 弹框提示一个无图标的Toast 消息
 @str 要提示的消息内容默认值

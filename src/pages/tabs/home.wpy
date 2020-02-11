@@ -4,8 +4,8 @@
       <!-- 轮播图区域 -->
       <swiper circular
        indicator-dots
-         autoplay interval="3000" 
-      indicator-active-color="rgba(135,206,235)">
+       autoplay interval="3000" 
+       indicator-active-color="rgba(135,206,235)">
         <swiper-item wx:for="{{swiperList}}" wx:key='index'>
           <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
           <image src="{{item.image_src}}"/>
