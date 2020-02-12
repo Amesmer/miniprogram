@@ -60,6 +60,14 @@
 					"id": -1,
 					"name": "搜索功能开发",
 					"pathName": "pages/tabs/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "商品列表",
+					"pathName": "pages/goods_list",
+					"query": "query=手机",
 					"scene": null
 				}
 			]

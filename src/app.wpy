@@ -67,7 +67,9 @@ export default class extends wepy.app {
       'van-col': './assets/vant/col/index',
       'van-search': './assets/vant/search/index',
       'van-cell': './assets/vant/cell/index',
-      'van-cell-group': './assets/vant/cell-group/index'
+      'van-cell-group': './assets/vant/cell-group/index',
+      'van-icon': './assets/vant/icon/index',
+      'van-tag': './assets/vant/tag/index'
     }
   }
 
