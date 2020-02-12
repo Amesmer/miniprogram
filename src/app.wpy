@@ -69,7 +69,8 @@ export default class extends wepy.app {
       'van-cell': './assets/vant/cell/index',
       'van-cell-group': './assets/vant/cell-group/index',
       'van-icon': './assets/vant/icon/index',
-      'van-tag': './assets/vant/tag/index'
+      'van-tag': './assets/vant/tag/index',
+      'van-card': './assets/vant/card/index'
     }
   }
 
@@ -85,7 +86,7 @@ export default class extends wepy.app {
     this.use('promisify')
 
     // 拦截器
-    this.intercept('reuest', {
+    this.intercept('request', {
       // 发出请求时的回调函数
       config(p) {
         wepy.showLoading({

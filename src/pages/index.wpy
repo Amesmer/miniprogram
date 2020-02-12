@@ -8,6 +8,6 @@
 import wepy from 'wepy'
 export default class index extends wepy.page {
   config = {}
-  inload = {}
+  onLoad = {}
 }
 </script>
