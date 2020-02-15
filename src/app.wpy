@@ -70,7 +70,13 @@ export default class extends wepy.app {
       'van-cell-group': './assets/vant/cell-group/index',
       'van-icon': './assets/vant/icon/index',
       'van-tag': './assets/vant/tag/index',
-      'van-card': './assets/vant/card/index'
+      'van-card': './assets/vant/card/index',
+      'van-tab': './assets/vant/tab/index',
+      'van-tabs': './assets/vant/tabs/index',
+      'van-goods-action': './assets/vant/goods-action/index',
+      'van-goods-action-icon': './assets/vant/goods-action-icon/index',
+      'van-goods-action-button': './assets/vant/goods-action-button/index',
+      wxparse: './assets/wxparse/wxparse'
     }
   }
 

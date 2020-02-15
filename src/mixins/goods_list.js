@@ -24,7 +24,7 @@ export default class extends wepy.mixin {
   }
   methods = {
     goGoodsDetail(goods_id){
-      wepy.navigateTo({ url: '/pages/goods_detail/main?goods_id'+goods_id });
+      wepy.navigateTo({ url: '/pages/goods_detail/main?goods_id='+goods_id });
       
     }
   }
