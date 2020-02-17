@@ -1,0 +1,60 @@
+<template>
+    <view>
+        <!-- 选择收货地址按钮区域 -->
+        <view class="choose_address_box" wx:if="{{isHaveAddress===false}}">
+            <van-button type="info" size="small" @tap="chooseAddress">+选择收货地址</van-button>
+        </view>
+        <!-- 收货人信息区域 -->
+        <view class="address_box" wx:else>
+            <!-- 收货人联系电话 -->
+            <view class="box1">
+                <text>收货人:{{addressInfo.userName}}</text>
+                <view>
+                    <text>联系电话:{{addressInfo.telNumber}}</text>
+                    <van-icon name="arrow"></van-icon>
+                </view>
+            </view>
+            <!-- 收货地址 -->
+            <view class="box2">收货地址:</view>
+
+        </view>
+        <!-- 分割线 -->
+        <image src="/assets/images/cart_border@2x.png" class="sep_line"/>
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import mix from '@/mixins/order.js'
+export default class extends wepy.page {
+  config = {
+    navigationBarTitleText: '确认订单'
+  }
+  mixins = [mix]
+}
+</script>
+
+<style lang="less">
+.choose_address_box {
+  text-align: center;
+  padding: 60rpx 0;
+}
+.sep_line {
+  width: 100%;
+  height: 7px;
+  display: block;
+}
+.address_box{
+    font-size: 26rpx;
+    padding: 0 10rpx;
+    .box1{
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 0;
+    }
+    .box2{
+        padding-bottom: 30rpx;
+    }
+}
+
+</style>

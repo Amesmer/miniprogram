@@ -76,6 +76,19 @@
 					"pathName": "pages/goods_detail/main",
 					"query": "goods_id=701",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/tabs/cart",
+					"query": "goods_id=701",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order",
+					"scene": null
 				}
 			]
 		}

@@ -75,11 +75,12 @@
     text="购物车"
     url="/pages/tabs/cart"
     link-type="switchTab"
+    info="{{total}}"
   />
   <van-goods-action-button
     text="加入购物车"
     type="warning"
-    bind:click="onClickButton"
+    bind:click="addToCart"
   />
   <van-goods-action-button
     text="立即购买"
