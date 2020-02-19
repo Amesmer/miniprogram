@@ -193,6 +193,11 @@ export default class extends wepy.app {
         wepy.showLoading({
           title: '数据加载中...'
         })
+        p.header = {
+          Authorization: wepy.getStorageSync('token')
+        }
+        console.log(p)
+        // 必须返回object对象
         return p
       },
 
