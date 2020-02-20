@@ -17,7 +17,8 @@ export default class extends wepy.app {
       'pages/goods_detail/main',
       'pages/goods_list',
       'pages/index',
-      'pages/order'
+      'pages/order',
+      'pages/orderlist'
     ],
     window: {
       backgroundTextStyle: 'dark',
@@ -82,6 +83,7 @@ export default class extends wepy.app {
       'van-swipe-cell': './assets/vant/swipe-cell/index',
       'van-submit-bar': './assets/vant/submit-bar/index',
       'van-button': './assets/vant/button/index',
+      'van-panel': './assets/vant/panel/index',
       wxparse: './assets/wxparse/wxparse'
     }
   }
@@ -194,7 +196,9 @@ export default class extends wepy.app {
           title: '数据加载中...'
         })
         p.header = {
-          Authorization: wepy.getStorageSync('token')
+          // Authorization: wepy.getStorageSync('token')
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjE1LCJpYXQiOjE1ODIwOTg3OTMsImV4cCI6MTAwMTU4MjA5ODc5Mn0.xg9wSXJRa-s7w1J4I9PuzI4rkswG_YG14KTnuo8TT1g'
         }
         console.log(p)
         // 必须返回object对象
